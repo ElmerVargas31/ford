@@ -1,0 +1,165 @@
+/*RESPONSIVE PARA TABLETA*/
+@media screen and (max-width: 950px){
+    /*Estructura Básica*/
+    #wrapper,header{
+        width: 100%; 
+    }
+    .principal{
+        height: 100%; margin-top: 100px;
+        padding-top: 20px; padding-bottom: 30px;
+    }
+    .buscar{
+        padding-right: 40px; padding-left: 40px;
+    }
+    .redes{
+        flex-direction: column; height: 125px;
+        justify-content: space-evenly;
+    }
+
+    /*-----ENCABEZADO - MENÚ-----*/
+    #barras,#menu1,#menu2{
+        display: none;
+    }
+    .barras_menu,.cerrar,#menu_res{
+        display: block;
+    }
+    .barras_menu,.cerrar{
+        position: fixed; width: 35px; height: 35px;
+        top: 20px; right: 17%; color: var(--azul-oscuro-pie); 
+        background-color: rgb(225, 225, 225,.7);
+        text-align: center; padding-top: 4px;
+    }
+    .cerrar{
+        display: none;
+    }
+    #menu_res{
+        list-style: none; width: 100%; position: fixed; left: 0;
+        top: 90px; height: 0%; background-color: rgb(225, 225, 225);
+        z-index: 1000; text-align: center; padding: 2% 0; transition: 300ms;
+        visibility: hidden; opacity: 0; overflow: hidden;
+    }
+    #menu_res li a{
+        font-size: 18px; color: var(--azul-oscuro-pie);
+        margin: 5px 0; display: block; font-weight: bold;
+    }
+
+    /*Cuando input esta chequeado, Mostrar Menú Responsivo*/
+    input[type="checkbox"]:checked ~ #menu_res{
+        visibility: visible; opacity: 1; height: 30%;
+    }
+    /*Cuando input esta chequeado, Ocultar Ícono de Barras*/
+    input[type="checkbox"]:checked + .barras_menu{
+        display: none;
+    }
+    /*Cuando input esta chequeado, Mostrar Ícono de Cerrar*/
+    input[type="checkbox"]:checked ~ .cerrar{
+        display: block;
+    }
+
+    /*-----CONTENIDO PRINCIPAL (MAIN)-----*/
+    .principal h1{
+        font-size: 35px;
+    }
+    .principal p, #info{
+        font-size: 14px;
+    }
+    .principal p{
+        width: 70%;
+    }
+    .card h2{
+        font-size: 22px; margin-bottom: 6px;
+    }
+    #mini{
+        font-size: 12px; margin-bottom: 8px;
+    }
+    #info{
+        margin-bottom: 15px;
+    }
+    #btn_cotiza,#btn_inve{
+        width: 160px; height: 35px;
+        margin: 8px 0px; font-size: 14px;
+    }
+
+    /*-----PIE DE PÁGINA-----*/
+
+    /*Parte I*/
+    .buscar h3{
+        font-size: 20px;
+    }
+
+    /*Parte II*/
+    .lado1{
+        width: 460px; 
+    }
+    .lado1 img{
+        width: 215px;
+    }
+    .lado2{
+        width: 530px; justify-content: space-around; 
+    }
+    .lado2 a{
+        font-size: 14px; margin-left: -12px;
+    }
+
+    /*Parte III*/
+    #term_sup{
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    #img_foot{
+        justify-content: center; align-items: center;
+        margin: 7px 0;
+    }
+    #img_foot a, figcaption{
+        margin-left: 5px; font-size: 16px;
+    }
+    #term_inf{
+        display: none;
+    }  
+}
+
+/*RESPONSIVE PARA TELÉFONO*/
+@media screen and (max-width: 500px){
+    /*-----ENCABEZADO - MENÚ-----*/
+    #menu_res li a{
+        font-size: 16px;
+    }
+    /*Cuando input esta chequeado, Mostrar Menú Responsivo*/
+    input[type="checkbox"]:checked ~ #menu_res{
+        visibility: visible; opacity: 1; height: 25%;
+    }
+
+    /*-----CONTENIDO PRINCIPAL (MAIN)-----*/
+    .principal h1{
+        font-size: 30px;
+    }
+    .principal p{
+        width: 90%;
+    }
+    .fila_cards{
+        flex-direction: column; align-items: center;
+        justify-content: center; margin-bottom: 0px;
+    }
+    .card{
+        width: 90%; margin: 5px 0;
+        padding: 2%;
+    }
+    #btn_cotiza,#btn_inve{
+        height: 45px; margin-left: 50%;
+        transform: translate(-50%,0%); margin-top: 10px;
+    }
+
+    /*-----PIE DE PÁGINA-----*/
+    .buscar,.lado2,.terminos{
+       display: none;
+    }
+    .redes{
+        margin-top: 15px; height: 180px;
+    }
+    .lado1{
+        flex-direction: column;
+    }
+    .lado1 span{
+        font-size: 18px; margin-bottom: 15px;
+    }
+}
